@@ -95,3 +95,89 @@ if (isValid === false) {
   // ...
 }
 */
+
+//Дополнительные пояснения
+/*
+function isLoginValid(login, min = 4, max = 16) {
+	// Это:
+  return login.length >= min && login.length <= max;
+
+	// равно этому:
+  let loginValid = false;
+  if (login.length >= min && login.length <= max) {
+    loginValid = true;
+  }
+  return loginValid;
+
+	// или равно этому:
+  if (login.length >= min && login.length <= max) {
+    return true;
+  } else {
+    return false;
+  }
+
+	// или равно этому:
+  if (login.length >= min && login.length <= max) {
+    return true;
+  }
+  return false;
+
+
+	// Вот это никогда не надо использовать:
+  return login.length >= min && login.length <= max ? true : false;
+}
+
+
+function isLoginUnique(allLogins, login) {
+	// Это:
+  return !allLogins.includes(login);
+
+	// равно этому:
+  let loginUnique = true;
+  if (allLogins.includes(login)) {
+    loginUnique = false;
+  }
+  return loginUnique;
+
+	// или равно этому:
+  let loginUnique = false;
+  if (!allLogins.includes(login)) {
+    loginUnique = true;
+  }
+  return loginUnique;
+
+	// или равно этому:
+  if (!allLogins.includes(login)) {
+    return true;
+  } else {
+    return false;
+  }
+
+	// или равно этому:
+  if (allLogins.includes(login)) {
+    return false;
+  } else {
+    return true;
+  }
+
+	// или равно этому:
+  if (allLogins.includes(login)) {
+  	return false;
+  }
+  return true;
+
+
+	// или равно этому:
+  if (!allLogins.includes(login)) {
+  	return true;
+  }
+  return false;
+
+
+	// Вот это никогда не надо использовать:
+  return !allLogins.includes(login) ? true : false;
+	// или вот это
+  return allLogins.includes(login) ? false : true;
+}
+
+*/
